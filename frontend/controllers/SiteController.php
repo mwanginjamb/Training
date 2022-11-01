@@ -75,6 +75,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $client = Yii::$app->odata::client('leaveApplicationList');
+
+        /* GET a list of customers */
+        // echo json_encode($client->read(), JSON_PRETTY_PRINT);
+        // exit;
         return $this->render('index');
     }
 
